@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>OUIGO Control</title>
+    <meta name="description" content="Contrôle propreté des rames OUIGO — Application terrain SNCF" />
+    <meta name="theme-color" content="#E6007E" />
+    <!-- PWA plein écran Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- PWA plein écran iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="OUIGO Control" />
+    <!-- Icônes via /api/pwa/ (routes publiques sans authentification) -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/api/pwa/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/api/pwa/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/api/pwa/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/api/pwa/icon-512.png" />
+    <!-- Manifest PWA via /api/pwa/ (route publique sans authentification) -->
+    <link rel="manifest" href="/api/pwa/manifest.json" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      defer
+      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+  </body>
+
+</html>
