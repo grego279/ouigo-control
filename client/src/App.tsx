@@ -1,11 +1,16 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Router as WouterRouter, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import DiagDictee from "./pages/DiagDictee";
+
+// Sous GitHub Pages l'app est servie depuis un sous-dossier (ex: /ouigo-control/)
+// plutôt qu'à la racine du domaine. On récupère ce préfixe automatiquement à
+// partir du <base> défini par Vite au moment du build (voir vite.config.ts).
+const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
