@@ -260,6 +260,7 @@ export const VALISE_NEC_ITEMS = [
   "Lunettes de protection",
   "Gilet",
   "Badge",
+  "Chronogramme",
 ];
 
 export const OP_NETTOYAGE_OPTIONS = ["NNO", "NWC", "NSY", "MAL", "OPM", "NEB", "PNUISI"];
